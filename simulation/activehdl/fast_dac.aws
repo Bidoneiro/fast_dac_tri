@@ -1,0 +1,6 @@
+[Version]
+Version=13.0
+[Designs]
+fast_dac=fast_dac.adf
+[Settings]
+Active=fast_dac

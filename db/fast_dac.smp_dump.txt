@@ -1,0 +1,7 @@
+
+State Machine - |Main_structure|fast_dac:inst2|state
+Name state.GEN_TRI state.GEN_SQR state.GEN_SIN state.IDLE 
+state.IDLE 0 0 0 0 
+state.GEN_SIN 0 0 1 1 
+state.GEN_SQR 0 1 0 1 
+state.GEN_TRI 1 0 0 1 

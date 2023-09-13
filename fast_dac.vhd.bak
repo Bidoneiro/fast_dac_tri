@@ -1,0 +1,90 @@
+LIBRARY ieee;
+USE ieee.std_logic_1164.all;
+
+ENTITY fast_dac is
+  GENERIC(
+    FREQ_STEP  :  INTEGER := 64;    --stosunek miedzy mclk a sclk
+    sclk_ws_ratio    :  INTEGER := 64;   --liczba cykli sclk w stosunku do ws - lrck
+    data_width          :  INTEGER := 24);  --szerokosc danych - 24bitowy przetwornik
+  PORT(
+
+    mclk       		:  IN  STD_LOGIC;                             --main clock 
+	 PLL_locked     	:  IN  STD_LOGIC;                             --info ze clock wejsciowy jest stabilny
+	 button_reset		:  IN  STD_LOGIC; 									
+	 next_state			:  IN  STD_LOGIC;	 
+	 
+	 data_start     	:  IN  STD_LOGIC;                             --moze sie przyda do startu sekwencji
+	 
+	 addres_selector 		:  OUT  STD_LOGIC_VECTOR (15 DOWNTO 0);
+    data_bits_a  		:  OUT  STD_LOGIC_VECTOR (15 DOWNTO 0);
+	 data_bits_b   	:  OUT  STD_LOGIC_VECTOR (15 DOWNTO 0)      --serial clock
+);
+	 --
+END fast_dac;
+
+ARCHITECTURE logic OF fast_dac IS
+	TYPE state_fsm IS(IDLE,GEN_SIN,GEN_SQR,GEN_TRI); --deklaracja wszystkich stanow
+	SIGNAL sclk_int       :  STD_LOGIC := '1';                     
+	SIGNAL state			 :	 state_fsm;
+	SIGNAL reset			 :	 STD_LOGIC;
+	SIGNAL button_state	 :	 STD_LOGIC := '0';    	
+	SIGNAL addres_sig  	 :  STD_LOGIC_VECTOR (15 DOWNTO 0); --sygnal do adresu
+   SIGNAL data_bits_a_sig:  STD_LOGIC_VECTOR (15 DOWNTO 0);--
+	SIGNAL data_bits_b_sig:  STD_LOGIC_VECTOR (15 DOWNTO 0);
+BEGIN 
+	PROCESS (mclk,reset) --proces genercujacy sclk
+	BEGIN
+		IF(reset='1')THEN
+			state <=IDLE;
+		ELSIF rising_edge(msclk)THEN
+			state <= next_state;
+		ELSE
+			null;
+	END IF;
+	END PROCESS;
+	
+	PROCESS (button_state) 
+	BEGIN
+		CASE state is
+			WHEN IDLE =>
+				IF rising_edge(button_state)THEN
+					next_state <=GEN_SIN;
+				END IF;
+			WHEN GEN_SIN =>
+				IF rising_edge(button_state)THEN
+					next_state <=GEN_SQR;
+				END IF;
+			WHEN GEN_SQR =>
+				IF rising_edge(button_state)THEN
+					next_state <=GEN_TRI;
+				END IF;
+			WHEN GEN_TRI =>
+				IF rising_edge(button_state)THEN
+					next_state <=IDLE;
+				END IF;
+			WHEN others =>
+				--next_state <=IDLE;
+		END CASE;
+	
+   END PROCESS; 
+	
+	PROCESS (mclk)
+	BEGIN
+		CASE state is
+			WHEN IDLE =>
+				addres_sig <="1111111111111111";
+			WHEN GEN_SIN =>
+				addres_sig <="1111000000000000";
+			WHEN GEN_SQR =>
+				addres_sig <="0000111100000000";
+			WHEN GEN_TRI =>
+				addres_sig <="0000000011110000";
+			WHEN others =>
+				addres_sig <="0000000000001111";
+		END CASE;
+   END PROCESS;
+
+
+	
+END logic;
+    

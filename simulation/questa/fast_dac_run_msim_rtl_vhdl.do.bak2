@@ -1,0 +1,12 @@
+transcript on
+if {[file exists rtl_work]} {
+	vdel -lib rtl_work -all
+}
+vlib rtl_work
+vmap work rtl_work
+
+vlog -vlog01compat -work work +incdir+C:/Users/01122499/Documents/GitHub/fast_dac_software/db {C:/Users/01122499/Documents/GitHub/fast_dac_software/db/ip_core_pll_altpll.v}
+vcom -93 -work work {C:/Users/01122499/Documents/GitHub/fast_dac_software/fast_dac.vhd}
+vcom -93 -work work {C:/Users/01122499/Documents/GitHub/fast_dac_software/IP_CORE_PLL.vhd}
+vcom -93 -work work {C:/Users/01122499/Documents/GitHub/fast_dac_software/IP_CORE_ROM.vhd}
+

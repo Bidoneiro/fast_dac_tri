@@ -1,0 +1,193 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/01122499/Documents/GitHub/fast_dac_triangle/simulation/modelsim
+Efast_dac
+Z1 w1693957624
+Z2 DPx4 ieee 11 numeric_std 0 22 :ASDNFgHXf_ih3J@9F3Ze1
+Z3 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z4 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
+R0
+Z5 8C:/Users/01122499/Documents/GitHub/fast_dac_triangle/fast_dac.vhd
+Z6 FC:/Users/01122499/Documents/GitHub/fast_dac_triangle/fast_dac.vhd
+l0
+L5
+Vd^LnXP:nX8IieH`=ajd_V1
+!s100 fCBH>XOFkJPoNP^JcBU=P3
+Z7 OV;C;10.5b;63
+31
+Z8 !s110 1694460275
+!i10b 1
+Z9 !s108 1694460275.000000
+Z10 !s90 -reportprogress|300|-93|-work|work|C:/Users/01122499/Documents/GitHub/fast_dac_triangle/fast_dac.vhd|
+Z11 !s107 C:/Users/01122499/Documents/GitHub/fast_dac_triangle/fast_dac.vhd|
+!i113 1
+Z12 o-93 -work work
+Z13 tExplicit 1 CvgOpt 0
+Alogic
+R2
+R3
+R4
+DEx4 work 8 fast_dac 0 22 d^LnXP:nX8IieH`=ajd_V1
+l30
+L17
+VT@JR^NTDMb>DR<oU?Fc5_0
+!s100 nNHBemG0]bPbU`2i0zd@50
+R7
+31
+R8
+!i10b 1
+R9
+R10
+R11
+!i113 1
+R12
+R13
+Eip_core_pll
+Z14 w1693874180
+R3
+R4
+R0
+Z15 8C:/Users/01122499/Documents/GitHub/fast_dac_triangle/IP_CORE_PLL.vhd
+Z16 FC:/Users/01122499/Documents/GitHub/fast_dac_triangle/IP_CORE_PLL.vhd
+l0
+L43
+VUoKU3_3gg6X_e;5jN^CJD0
+!s100 T2Md>Ia`h<eZize_nZ9V43
+R7
+31
+R8
+!i10b 1
+R9
+Z17 !s90 -reportprogress|300|-93|-work|work|C:/Users/01122499/Documents/GitHub/fast_dac_triangle/IP_CORE_PLL.vhd|
+Z18 !s107 C:/Users/01122499/Documents/GitHub/fast_dac_triangle/IP_CORE_PLL.vhd|
+!i113 1
+R12
+R13
+Asyn
+R3
+R4
+DEx4 work 11 ip_core_pll 0 22 UoKU3_3gg6X_e;5jN^CJD0
+l135
+L52
+Vn46S<c=D`[?joi7HV[g=C0
+!s100 ?1S6G82f[J7<Xc;Rzoj:X0
+R7
+31
+R8
+!i10b 1
+R9
+R17
+R18
+!i113 1
+R12
+R13
+vIP_CORE_PLL_altpll
+R8
+!i10b 1
+!s100 =2z>FSb6hgH`ni6iljEeC0
+IX14nKCa;K:KgLK?10E9Dh3
+VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1693874982
+8C:/Users/01122499/Documents/GitHub/fast_dac_triangle/db/ip_core_pll_altpll.v
+FC:/Users/01122499/Documents/GitHub/fast_dac_triangle/db/ip_core_pll_altpll.v
+L0 30
+OV;L;10.5b;63
+r1
+!s85 0
+31
+R9
+!s107 C:/Users/01122499/Documents/GitHub/fast_dac_triangle/db/ip_core_pll_altpll.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/01122499/Documents/GitHub/fast_dac_triangle/db|C:/Users/01122499/Documents/GitHub/fast_dac_triangle/db/ip_core_pll_altpll.v|
+!i113 1
+o-vlog01compat -work work
+!s92 -vlog01compat -work work +incdir+C:/Users/01122499/Documents/GitHub/fast_dac_triangle/db
+tCvgOpt 0
+n@i@p_@c@o@r@e_@p@l@l_altpll
+Eip_core_rom
+Z19 w1693443328
+Z20 DPx9 altera_mf 20 altera_mf_components 0 22 GX]PGX0dkGdbU698H0h^l0
+R3
+R4
+R0
+Z21 8C:/Users/01122499/Documents/GitHub/fast_dac_triangle/IP_CORE_ROM.vhd
+Z22 FC:/Users/01122499/Documents/GitHub/fast_dac_triangle/IP_CORE_ROM.vhd
+l0
+L43
+VdThnnLnVW90ZMB>MTd9XR2
+!s100 e3=OEM?ohW=KbN0`gUJ7=3
+R7
+31
+R8
+!i10b 1
+R9
+Z23 !s90 -reportprogress|300|-93|-work|work|C:/Users/01122499/Documents/GitHub/fast_dac_triangle/IP_CORE_ROM.vhd|
+Z24 !s107 C:/Users/01122499/Documents/GitHub/fast_dac_triangle/IP_CORE_ROM.vhd|
+!i113 1
+R12
+R13
+Asyn
+R20
+R3
+R4
+DEx4 work 11 ip_core_rom 0 22 dThnnLnVW90ZMB>MTd9XR2
+l57
+L53
+VJ]h2B@BQYX[?N[9:E?GM10
+!s100 k?m^1=8=2UL5b?Sd?W:Ab2
+R7
+31
+R8
+!i10b 1
+R9
+R23
+R24
+!i113 1
+R12
+R13
+Emain_structure_vhd_tst
+Z25 w1693875354
+R3
+R4
+R0
+Z26 8C:/Users/01122499/Documents/GitHub/fast_dac_triangle/simulation/activehdl/Main_structure.vht
+Z27 FC:/Users/01122499/Documents/GitHub/fast_dac_triangle/simulation/activehdl/Main_structure.vht
+l0
+L31
+VCMiPM:I9]lD:M0o@Ka`>L2
+!s100 YJOUcXYo9RG?]GW__8Z5d3
+R7
+31
+R8
+!i10b 1
+R9
+Z28 !s90 -reportprogress|300|-93|-work|work|C:/Users/01122499/Documents/GitHub/fast_dac_triangle/simulation/activehdl/Main_structure.vht|
+Z29 !s107 C:/Users/01122499/Documents/GitHub/fast_dac_triangle/simulation/activehdl/Main_structure.vht|
+!i113 1
+R12
+R13
+Amain_structure_arch
+R3
+R4
+DEx4 work 22 main_structure_vhd_tst 0 22 CMiPM:I9]lD:M0o@Ka`>L2
+l58
+L33
+V@[hzhIbbzG;Od7XV;zP7?1
+!s100 P]76OzWkn7Yd1bmJ@k8FH2
+R7
+31
+R8
+!i10b 1
+R9
+R28
+R29
+!i113 1
+R12
+R13
