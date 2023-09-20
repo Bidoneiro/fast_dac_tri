@@ -9,7 +9,7 @@ ENTITY fast_dac is
  
 	 direct_output 		:  OUT  STD_LOGIC_VECTOR (15 DOWNTO 0);
 
-	 addres_selector 		:  OUT  STD_LOGIC_VECTOR (15 DOWNTO 0)
+	 output			:  OUT  STD_LOGIC_VECTOR (15 DOWNTO 0)
 );
 	 --
 END fast_dac;
@@ -24,11 +24,15 @@ ARCHITECTURE logic OF fast_dac IS
 	
 	SIGNAL direct_output_sig  	 :  STD_LOGIC_VECTOR (15 DOWNTO 0):="0000000000000000"; --sygnal do adresu
 
-	SIGNAL addres_sig  	 :  STD_LOGIC_VECTOR (15 DOWNTO 0):="0000000000000000"; --sygnal do adresu
-	SIGNAL max_count_sig : INTEGER := 60000; -- ne zwiekszac powyzej 2^15 - 32526 przy kodowaniu binary ze znakiem rozjezdzamy sie
-	SIGNAL basic_step_sig : INTEGER := 10000; -- konfiguracja sygnalu trojaktnego. basic step musi byc dzielnikiem max_count.
-BEGIN 
-	addres_selector <=addres_sig;
+	SIGNAL output_sig  	 :  STD_LOGIC_VECTOR (15 DOWNTO 0):="0000000000000000"; --sygnal do adresu
+	SIGNAL max_count_sig : INTEGER := 60000; -- to ograniczana maksymalna wartosc wychodzaca z DAC. aby dać absolute maks mozliwy na dac ta wartosc 
+	--musiałaby być 2^16 i step musiałby być dzielnikiem tej wartosci. To kwantuje nam mozliwe do uzyskania czestotliwosc
+
+	SIGNAL basic_step_sig : INTEGER := 12000; -- konfiguracja sygnalu trojaktnego. basic step musi byc dzielnikiem max_count.
+--6000 - 10MHz
+
+	BEGIN 
+	output <=output_sig;
 	direct_output <= direct_output_sig;
 	direct_output_sig <= STD_LOGIC_VECTOR(to_unsigned(count2,direct_output_sig'length));
 	PROCESS (mclk,reset) --proces genercujacy sclk
@@ -46,7 +50,7 @@ BEGIN
 	
 	PROCESS (mclk)
 	BEGIN
-	IF (mclk'EVENT and mclk = '1' ) THEN
+	IF (mclk'EVENT and mclk = '0' ) THEN
     --"direction" signal determines the direction of counting - up or down
      if(direction = '0') then
         if(count2 = max_count_sig) then
@@ -54,6 +58,7 @@ BEGIN
 				direction <= '1';
         else
             count2 <= count2 + basic_step_sig; --up counts from 129 to 255 and then 0 to 127
+				output_sig <= "0000000000000000"; -- to generuje prostokata
         end if;
     else
         if(count2 = 0) then
@@ -61,25 +66,9 @@ BEGIN
             direction <= '0';
         else
             count2 <= count2 - basic_step_sig; --down counts from 126 to 0 and then 255 to 128
+				output_sig <= "1111111111111111"; -- to generuje prostokata
         end if;
     end if;		
-	 
-
-		
-		
-		
-		
-		
-		--IF(addres_sig="1111111111111111") THEN	
-		   --signal_value <= signal_value+1;
-		--	temp <= "0000000000000000";
-			
-			--addres_sig <= std_logic_vector(temp);
-				--addres_sig <= std_logic_vector(to_unsigned(signal_value, addres_sig'length));
-			--ELSE
-			--temp <= temp+"0001111111111111";
-			--addres_sig <= std_logic_vector(temp);
-		--END IF;
 	END IF;
 	
    END PROCESS;

@@ -62,7 +62,7 @@ BEGIN
 	clk => clk,
 	mck => mck,
 	output => output,
-	adres => adres
+	adres => direct_output
 
 	);
 

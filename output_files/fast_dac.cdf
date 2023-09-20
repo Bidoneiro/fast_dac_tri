@@ -4,7 +4,7 @@ JedecChain;
 	DefaultMfr(6E);
 
 	P ActionCode(Cfg)
-		Device PartName(10M50DAF484) Path("C:/Users/01122499/Documents/GitHub/fast_dac_triangle/output_files/") File("fast_dac.sof") MfrSpec(OpMask(1));
+		Device PartName(10M50DAF484) Path("C:/Users/01122499/Documents/GitHub/fast_dac_tri/output_files/") File("166k.sof") MfrSpec(OpMask(1));
 
 ChainEnd;
 

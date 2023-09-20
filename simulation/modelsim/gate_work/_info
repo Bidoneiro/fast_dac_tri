@@ -7,9 +7,9 @@ z2
 !i10e 25
 !i10f 100
 cModel Technology
-Z0 dC:/Users/01122499/Documents/GitHub/fast_dac_triangle/simulation/modelsim
+Z0 dC:/Users/01122499/Documents/GitHub/fast_dac_tri/simulation/modelsim
 Emain_structure
-Z1 w1694462476
+Z1 w1695043250
 Z2 DPx11 fiftyfivenm 21 fiftyfivenm_atom_pack 0 22 DXjFZ7@:`];0N[nW:BUOE2
 Z3 DPx11 fiftyfivenm 22 fiftyfivenm_components 0 22 7hgTiIlm7;@8G_GJR1mj_1
 Z4 DPx4 ieee 16 vital_primitives 0 22 G>kiXP8Q9dRClKfK1Zn7j1
@@ -27,9 +27,9 @@ V]hJ5^@=6ZKOo<@kHVW15=1
 !s100 UK5gdfCEH6>>Nz?Rgn?fG2
 Z12 OV;C;10.5b;63
 31
-Z13 !s110 1694462543
+Z13 !s110 1695043456
 !i10b 1
-Z14 !s108 1694462543.000000
+Z14 !s108 1695043456.000000
 Z15 !s90 -reportprogress|300|-93|-work|work|fast_dac.vho|
 Z16 !s107 fast_dac.vho|
 !i113 1
@@ -45,10 +45,10 @@ R7
 R8
 R9
 DEx4 work 14 main_structure 0 22 ]hJ5^@=6ZKOo<@kHVW15=1
-l217
+l202
 L83
-V0LI8<DfiA8W4lXaZm=MeY2
-!s100 3X;Ga9zEgF24JOKeD_gXd0
+VIN`787GF;Y`^XNUQDC[Gn1
+!s100 m[1EGn4HkRHd289TUL4KK2
 R12
 31
 R13
@@ -60,12 +60,12 @@ R16
 R17
 R18
 Emain_structure_vhd_tst
-Z19 w1693875354
+w1695043429
 R7
 R8
 R0
-Z20 8C:/Users/01122499/Documents/GitHub/fast_dac_triangle/simulation/activehdl/Main_structure.vht
-Z21 FC:/Users/01122499/Documents/GitHub/fast_dac_triangle/simulation/activehdl/Main_structure.vht
+8C:/Users/01122499/Documents/GitHub/fast_dac_tri/simulation/activehdl/Main_structure.vht
+FC:/Users/01122499/Documents/GitHub/fast_dac_tri/simulation/activehdl/Main_structure.vht
 l0
 L31
 VCMiPM:I9]lD:M0o@Ka`>L2
@@ -75,26 +75,8 @@ R12
 R13
 !i10b 1
 R14
-Z22 !s90 -reportprogress|300|-93|-work|work|C:/Users/01122499/Documents/GitHub/fast_dac_triangle/simulation/activehdl/Main_structure.vht|
-Z23 !s107 C:/Users/01122499/Documents/GitHub/fast_dac_triangle/simulation/activehdl/Main_structure.vht|
-!i113 1
-R17
-R18
-Amain_structure_arch
-R7
-R8
-DEx4 work 22 main_structure_vhd_tst 0 22 CMiPM:I9]lD:M0o@Ka`>L2
-l58
-L33
-V@[hzhIbbzG;Od7XV;zP7?1
-!s100 P]76OzWkn7Yd1bmJ@k8FH2
-R12
-31
-R13
-!i10b 1
-R14
-R22
-R23
+!s90 -reportprogress|300|-93|-work|work|C:/Users/01122499/Documents/GitHub/fast_dac_tri/simulation/activehdl/Main_structure.vht|
+!s107 C:/Users/01122499/Documents/GitHub/fast_dac_tri/simulation/activehdl/Main_structure.vht|
 !i113 1
 R17
 R18

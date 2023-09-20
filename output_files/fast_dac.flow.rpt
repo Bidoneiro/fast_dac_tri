@@ -1,5 +1,5 @@
 Flow report for fast_dac
-Mon Sep 11 22:16:52 2023
+Wed Sep 20 01:30:53 2023
 Quartus Prime Version 22.1std.2 Build 922 07/20/2023 SC Lite Edition
 
 
@@ -41,20 +41,20 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------------+
 ; Flow Summary                                                                        ;
 +------------------------------------+------------------------------------------------+
-; Flow Status                        ; Successful - Mon Sep 11 22:16:52 2023          ;
+; Flow Status                        ; Successful - Wed Sep 20 01:30:53 2023          ;
 ; Quartus Prime Version              ; 22.1std.2 Build 922 07/20/2023 SC Lite Edition ;
 ; Revision Name                      ; fast_dac                                       ;
 ; Top-level Entity Name              ; Main_structure                                 ;
 ; Family                             ; MAX 10                                         ;
 ; Device                             ; 10M50DAF484C7G                                 ;
 ; Timing Models                      ; Final                                          ;
-; Total logic elements               ; 41 / 49,760 ( < 1 % )                          ;
-;     Total combinational functions  ; 40 / 49,760 ( < 1 % )                          ;
+; Total logic elements               ; 43 / 49,760 ( < 1 % )                          ;
+;     Total combinational functions  ; 42 / 49,760 ( < 1 % )                          ;
 ;     Dedicated logic registers      ; 29 / 49,760 ( < 1 % )                          ;
 ; Total registers                    ; 29                                             ;
 ; Total pins                         ; 34 / 360 ( 9 % )                               ;
 ; Total virtual pins                 ; 0                                              ;
-; Total memory bits                  ; 32 / 1,677,312 ( < 1 % )                       ;
+; Total memory bits                  ; 0 / 1,677,312 ( 0 % )                          ;
 ; Embedded Multiplier 9-bit elements ; 0 / 288 ( 0 % )                                ;
 ; Total PLLs                         ; 1 / 4 ( 25 % )                                 ;
 ; UFM blocks                         ; 0 / 1 ( 0 % )                                  ;
@@ -67,7 +67,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 09/11/2023 22:16:27 ;
+; Start date & time ; 09/20/2023 01:30:28 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; fast_dac            ;
 +-------------------+---------------------+
@@ -78,7 +78,7 @@ https://fpgasoftware.intel.com/eula.
 +--------------------------------------+-----------------------------------------------+---------------+----------------+-----------------------------------+
 ; Assignment Name                      ; Value                                         ; Default Value ; Entity Name    ; Section Id                        ;
 +--------------------------------------+-----------------------------------------------+---------------+----------------+-----------------------------------+
-; COMPILER_SIGNATURE_ID                ; 154535790567702.169446338719820               ; --            ; --             ; --                                ;
+; COMPILER_SIGNATURE_ID                ; 154535790567702.169516622803328               ; --            ; --             ; --                                ;
 ; EDA_DESIGN_INSTANCE_NAME             ; NA                                            ; --            ; --             ; Main_structure_vhd_tst            ;
 ; EDA_GENERATE_FUNCTIONAL_NETLIST      ; Off                                           ; --            ; --             ; eda_board_design_timing           ;
 ; EDA_GENERATE_FUNCTIONAL_NETLIST      ; Off                                           ; --            ; --             ; eda_board_design_signal_integrity ;
@@ -121,12 +121,12 @@ https://fpgasoftware.intel.com/eula.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:09     ; 1.0                     ; 4911 MB             ; 00:00:21                           ;
-; Fitter               ; 00:00:07     ; 1.1                     ; 6626 MB             ; 00:00:14                           ;
-; Assembler            ; 00:00:02     ; 1.0                     ; 4721 MB             ; 00:00:02                           ;
-; Timing Analyzer      ; 00:00:02     ; 1.2                     ; 4937 MB             ; 00:00:02                           ;
-; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 4672 MB             ; 00:00:00                           ;
-; Total                ; 00:00:21     ; --                      ; --                  ; 00:00:39                           ;
+; Analysis & Synthesis ; 00:00:08     ; 1.0                     ; 4902 MB             ; 00:00:20                           ;
+; Fitter               ; 00:00:08     ; 1.1                     ; 6626 MB             ; 00:00:14                           ;
+; Assembler            ; 00:00:02     ; 1.0                     ; 4715 MB             ; 00:00:02                           ;
+; Timing Analyzer      ; 00:00:02     ; 1.1                     ; 4932 MB             ; 00:00:02                           ;
+; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 4647 MB             ; 00:00:00                           ;
+; Total                ; 00:00:21     ; --                      ; --                  ; 00:00:38                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 

@@ -31,7 +31,7 @@ vmap work gate_work
 
 vcom -93 -work work {fast_dac.vho}
 
-vcom -93 -work work {C:/Users/01122499/Documents/GitHub/fast_dac_triangle/simulation/activehdl/Main_structure.vht}
+vcom -93 -work work {C:/Users/01122499/Documents/GitHub/fast_dac_tri/simulation/activehdl/Main_structure.vht}
 
 vsim -t 1ps -L altera -L altera_lnsim -L fiftyfivenm -L gate_work -L work -voptargs="+acc"  Main_structure_vhd_tst
 

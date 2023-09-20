@@ -21,7 +21,7 @@ https://fpgasoftware.intel.com/eula.
 */
 (header "symbol" (version "1.1"))
 (symbol
-	(rect 16 16 224 96)
+	(rect 16 16 208 96)
 	(text "fast_dac" (rect 5 0 40 12)(font "Arial" ))
 	(text "inst" (rect 8 64 20 76)(font "Arial" ))
 	(port
@@ -32,31 +32,20 @@ https://fpgasoftware.intel.com/eula.
 		(line (pt 0 32)(pt 16 32)(line_width 1))
 	)
 	(port
-		(pt 208 32)
+		(pt 192 32)
 		(output)
 		(text "direct_output[15..0]" (rect 0 0 74 12)(font "Arial" ))
-		(text "direct_output[15..0]" (rect 113 27 187 39)(font "Arial" ))
-		(line (pt 208 32)(pt 192 32)(line_width 3))
+		(text "direct_output[15..0]" (rect 97 27 171 39)(font "Arial" ))
+		(line (pt 192 32)(pt 176 32)(line_width 3))
 	)
 	(port
-		(pt 208 48)
+		(pt 192 48)
 		(output)
-		(text "addres_selector[15..0]" (rect 0 0 87 12)(font "Arial" ))
-		(text "addres_selector[15..0]" (rect 100 43 187 55)(font "Arial" ))
-		(line (pt 208 48)(pt 192 48)(line_width 3))
+		(text "output[15..0]" (rect 0 0 47 12)(font "Arial" ))
+		(text "output[15..0]" (rect 124 43 171 55)(font "Arial" ))
+		(line (pt 192 48)(pt 176 48)(line_width 3))
 	)
-	(parameter
-		"BASIC_STEP"
-		"1"
-		""
-		(type "PARAMETER_SIGNED_DEC")	)
-	(parameter
-		"MAX_COUNT"
-		"65535"
-		""
-		(type "PARAMETER_SIGNED_DEC")	)
 	(drawing
-		(rectangle (rect 16 16 192 64)(line_width 1))
+		(rectangle (rect 16 16 176 64)(line_width 1))
 	)
-	(annotation_block (parameter)(rect 224 -64 324 16))
 )
