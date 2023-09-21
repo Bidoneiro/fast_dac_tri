@@ -28,7 +28,7 @@ ARCHITECTURE logic OF fast_dac IS
 	SIGNAL max_count_sig : INTEGER := 60000; -- to ograniczana maksymalna wartosc wychodzaca z DAC. aby dać absolute maks mozliwy na dac ta wartosc 
 	--musiałaby być 2^16 i step musiałby być dzielnikiem tej wartosci. To kwantuje nam mozliwe do uzyskania czestotliwosc
 
-	SIGNAL basic_step_sig : INTEGER := 12000; -- konfiguracja sygnalu trojaktnego. basic step musi byc dzielnikiem max_count.
+	SIGNAL basic_step_sig : INTEGER := 20000; -- konfiguracja sygnalu trojaktnego. basic step musi byc dzielnikiem max_count.
 --6000 - 10MHz
 
 	BEGIN 
